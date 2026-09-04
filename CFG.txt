@@ -1,0 +1,7 @@
+program    → statement*
+statement  → declaration | print
+declaration→ (int | float) ID '=' expression ';'
+print      → print '(' expression ')' ';'
+expression → term (('+' | '-') term)*
+term       → factor (('*' | '/') factor)*
+factor     → '-' factor | NUMBER | ID | '(' expression ')'
